@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Prototype Inheritance</title>
+    </head>
+    <body>
+        <script>
+            function Father()
+            {
+                return this.name="john"
+            }
+            Father.prototype.getFatherName = function()
+            {
+                return this.name
+            }
+            function Son()
+            {
+                return this.sname="madhu"
+            }
+            Son.prototype=new Father()  
+        Son.prototype.getSonName= function()
+        {
+            return this.sname
+        }
+        const son= new Son()
+       // const father= new Father()
+        console.log(son.getFatherName()) //prototypal Inheritance
+        console.log(son.getSonName()) //self property
+       // Son.Prototype.father.Prototype.getFatherName //prototypal chain
+        // console.log(typeOf(Son))  
+        // console.log(typeOf(Father))
+        </script>
+    </body>
+</html>

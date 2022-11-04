@@ -1,0 +1,56 @@
+<html>
+      <head>
+            <title>JS</title>
+            <script>
+                //Functions classes, Js newly introduced classes, previously
+                //we created objects for functions, just remove this kw from func
+                //to act as class
+                // i=0;
+                // console.log(i++);
+                // console.log(i);
+            // Functions
+                // function abc()
+                // {
+                //    this.name="Abc";
+                //     //console.log("abc");
+                //    this.getName=function()
+                //   {
+                //     return this.name;
+                //   }
+                //    this.setName=function(newName)
+                //   {
+                //     this.name=newName;
+                //   }
+                // }
+                //  let obj=new abc();
+                // //console.log("obj:", obj);
+                // console.log(obj.getName());
+                // obj.setName("Mythri");
+                // console.log(obj.getName());
+            //classes
+            class abc
+                {
+                   name="Abc";
+                    //console.log("abc");
+                   getName=function()
+                  {
+                    return this.name;
+                  }
+                   setName=function(newName)
+                  {
+                    this.name=newName;
+                  }
+                }
+                 let obj=new abc();
+                //console.log("obj:", obj);
+                console.log(obj.getName());
+                obj.setName("Mythri");
+                console.log(obj.getName());
+
+
+            </script>
+      </head>
+      <body>
+            <h1>Hello</h1>
+      </body>
+</html>

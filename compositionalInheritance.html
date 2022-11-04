@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Compositional Inheritance</title>
+    </head>
+    <body>
+        <script>
+        function Father(name)
+        {
+          this.name=name;
+          this.colors= ["red", "blue","green"]
+        }
+        Father.prototype.getName = function()
+        {
+            return "from father :" + this.name;
+        }
+        function Son(name,age)
+        {
+            Father.call(this, name)
+            this.age=age;
+        }
+        Son.prototype = new Father()
+        Son.prototype.getAge= function()
+        {
+            return "from son:", this.age
+        }
+         let instanceofSon = new Son("Brad", 25)
+         instanceofSon.colors.push("Purple")
+         console.log(instanceofSon.getName())
+         console.log(instanceofSon.getAge())
+         console.log(instanceofSon.colors)
+
+         let father = new Father("Doe")
+         console.log(father.colors)
+
+
+    </script>
+    </body>
+</html>

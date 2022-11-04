@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Functional Programming</title>
+</head>
+<body>
+<script>
+let count=0
+//pure functions
+// const increment = function (value)
+// {
+//     return count = count + value;
+// }
+//pure functions(using arrow)
+// const increment = (value) =>
+// {
+//     return count = count + value
+// }
+// increment(5)
+// alert(count)
+//High order functions
+// let arr=[10,20,30,40,50]
+// arr.map(function(e)
+// {
+//     console.log(e);
+// })
+//Executes func after 1000, post parameter method, high order func
+//setTimeout(()=>console.log("After 1 sec"), 1000)
+let arr=[1,2,3,4,5]
+arr.map(function(price)
+{
+    tax=5
+    console.log("Rs.  ", price+tax)
+})
+</script>
+</body>
+</html>

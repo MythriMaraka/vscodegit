@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Inheritance</title>
+    </head>
+    <body>
+        <script>
+            class Person
+            {
+                constructor(name)
+                {
+                    this.name=name;
+                }
+                 greeting= function()
+                {
+                    console.log("Hello Ms.", this.name);
+                } 
+            }
+             class Student extends Person
+            {
+                constructor(name)
+                {
+                    super(name);
+                }
+            }
+            class Employee extends Person
+            {
+                constructor(name)
+                {
+                    super(name);
+                }
+            } 
+          let employee=new Employee("Mythri");
+            console.log(employee.greeting()); 
+           // let person= new Person("mythri")
+            //console.log(person.name);
+        </script>
+    </body>
+</html>

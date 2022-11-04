@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Document Object Model</title>
+    </head>
+    <body></body>
+            <h1>Hello World</h1>
+            <h1>Welcome</h1>
+            <ul>
+                <li>Mobile</li>
+                <li>Desktop</li>
+                <li>Laptop</li>
+                <li class="clsname">Apple</li>
+                <li class="clsname">MAC</li>
+                <li id="demo">Android</li>
+            </ul>
+            <script>
+            //let list= document.getElementsByTagName('li');
+            // console.log(list);
+            // console.log(list[0].innerText);
+            // console.log(list[0]);
+            // list[0].innerHTML="Phone";
+            // for(let i=0;i<list.length;i++)
+            // {
+            //     list[i].innerHTML="Tablet";
+            // }
+            // let list=document.querySelectorAll("li");//selects all elements
+            // console.log(list);
+            // let list=document.querySelector("li");//selects first element
+            // console.log(list);
+            //by class name
+            // let list=document.querySelector("li.clsname");//selects that particular li that has class li
+            // console.log(list);
+            //by id
+            // let list=document.querySelector("li#demo");//selects by id
+            // console.log(list);
+            let list=document.getElementsByClassName("clsname")[0].innerHTML="iphone";//class attribute can have many classes with same name unlike id
+            console.log(list);
+
+            //write script inside body tag only becoz h1 is not in head
+        </script>
+    </body>
+</html>

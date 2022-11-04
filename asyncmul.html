@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Asynchronus JS </title>
+    </head>
+    <body>
+        <div id="demo"></div>
+        <script>
+            function getData()
+            {
+                var http = new XMLHttpRequest()
+                http.addEventListener('load', function()
+                {
+                    var result = ""
+                    result = JSON.parse(this.responseText)
+                   let obj = (result.data)
+                
+                //    let str ="<ul>"
+                //     str = str + "<li>" + obj.first_name + "</li>"
+                //     str = str + "<li>"+ obj.last_name + "</li>"
+                //     str = str + "<li>" + obj.email + "</li>"
+                //     str = str + "</ul>"
+                // document.getElementById("demo").innerHTML = str
+        //same as above by using map
+        let str = "<ul>"
+        obj.map((item) =>
+        {
+            str = str + "<li>" + item.first_name+ "</li>"
+            str = str + "<li>" + item.last_name+ "</li>"
+            str = str + "<li>" + item.email+ "</li>"
+        })
+                str = str + "</ul>"
+                document.getElementById("demo").innerHTML = str
+    })
+                http.open('GET', 'https://reqres.in/api/users/2')
+                http.send()
+            }
+            getData()
+            function fun()
+            {
+                setTimeout(function(){alert("from Fun")}, 5000)
+            }
+            fun()
+
+        function printing()
+        {
+            console.log("printing")
+        }
+        printing()
+        </script>
+    </body>
+</html>

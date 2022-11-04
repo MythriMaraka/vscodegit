@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Scope and Execution context</title>
+    </head>
+    <body>
+        <script>
+            //var is accessible to global scope i.e inside for loop
+            var a=10
+            for(var a=0;a<10;a++)
+            {
+                console.log("a is :", a)
+            }
+            console.log("a:", a)
+            console.log("----------")
+            let i=10 //let is accessible to local scope i.e inside for loop
+            for(let i=0;i<10;i++)
+            {
+                console.log("i is:",i)
+            }
+            console.log("i :", i)
+             //var and let not accessible inside func, coz var takes local variable values if they are accessible like for loop, if not takes the global
+            var b=10;
+            function abc()
+            {
+                var b=20;
+                console.log("b is", b)
+            }
+            abc()
+         console.log("b:",b)
+         //let
+         let j=10
+         function xyz()
+         {
+            let j=20
+            console.log("j is", j)
+         }
+         xyz()
+         console.log("j:",j)
+         //const
+         const url="www.google.com"
+         //console.log(url="http://google.com")  //error coz const cant be changed
+         console.log(url)
+         const obj=
+         {
+            a: '1',
+            b:'2'
+         }
+          obj.a="hello"
+          console.log(obj)
+          const fun= function()
+          {
+              console.log("Hello")
+          }
+          fun()
+        </script>
+    </body>
+</html>

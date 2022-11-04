@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Asynchronus JS </title>
+    </head>
+    <body>
+        <div id="demo"></div>
+        <script>
+            function getData()
+            {
+                var http = new XMLHttpRequest()
+                http.addEventListener('load', function(){
+                    var result = ""
+                    result = JSON.parse(this.responseText)
+                    var result = {...result.data}
+                    document.getElementById('demo').innerHTML = result.first_name
+                })
+                http.open('GET', 'https://reqres.in/api/users/2')
+                http.send()
+            }
+            getData()
+            function fun()
+            {
+                setTimeout(function(){alert("from Fun")}, 5000)
+            }
+            fun()
+
+        function printing()
+        {
+            console.log("printing")
+        }
+        printing()
+        </script>
+    </body>
+</html>
